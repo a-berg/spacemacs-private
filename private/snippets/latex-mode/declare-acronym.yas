@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: declare acronym
+# key: dac
+# --
+\DeclareAcronym{$1}{
+short = $2,
+long = $3
+}
+$0

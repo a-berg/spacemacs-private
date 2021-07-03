@@ -41,7 +41,9 @@
 ;;; Code:
 
 (defconst personal-config-packages
-  '()
+  '(olivetti
+    polymode
+    conda)
   "The list of Lisp packages required by the personal-config layer.
 
 Each entry is either:
@@ -68,3 +70,30 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
+
+;;; Owned Packages
+;; olivetti
+(defun personal-config/init-olivetti ()
+  (use-package olivetti))
+;; conda
+(defun personal-config/init-conda ()
+  (use-package conda))
+;; polymode
+(defun personal-config/init-polymode ()
+  (use-package polymode
+    :ensure t
+    :init
+    (define-hostmode poly-python-hostmode
+      :mode 'python-mode)
+
+    (define-innermode poly-python-markdown-innermode
+      :mode 'markdown-mode
+      :head-matcher "\)?:\n[ \t\n]*\"\"\"\n?"
+      :tail-matcher "[ \t\n]*\"\"\"\n"
+      :head-mode 'host
+      :tail-mode 'host)
+
+    (define-polymode poly-python-mode
+      :hostmode 'poly-python-hostmode
+      :innermodes '(poly-python-markdown-innermode))))
