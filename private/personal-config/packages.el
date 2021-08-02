@@ -43,6 +43,8 @@
 (defconst personal-config-packages
   '(olivetti
     polymode
+    pollen-mode
+    company-pollen ;; maybe take these 2 into a layer...
     conda)
   "The list of Lisp packages required by the personal-config layer.
 
@@ -79,6 +81,11 @@ Each entry is either:
 ;; conda
 (defun personal-config/init-conda ()
   (use-package conda))
+;; pollen mode
+(defun personal-config/init-pollen-mode ()
+  (use-package pollen-mode))
+(defun personal-config/init-company-pollen ()
+  (use-package company-pollen))
 ;; polymode
 (defun personal-config/init-polymode ()
   (use-package polymode

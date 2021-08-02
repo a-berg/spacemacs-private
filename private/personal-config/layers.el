@@ -15,6 +15,7 @@
  ;;Languages
    lsp
    emacs-lisp
+   racket
    (python :variables
            python-backend 'lsp
            python-lsp-server 'pyls
