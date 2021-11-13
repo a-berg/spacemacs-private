@@ -45,7 +45,9 @@
     polymode
     pollen-mode
     company-pollen ;; maybe take these 2 into a layer...
-    conda)
+    conda
+    parinfer-rust-mode
+    )
   "The list of Lisp packages required by the personal-config layer.
 
 Each entry is either:
@@ -78,6 +80,10 @@ Each entry is either:
 ;; olivetti
 (defun personal-config/init-olivetti ()
   (use-package olivetti))
+;; parinfer
+(defun personal-config/init-parinfer-rust-mode ()
+  (use-package parinfer-rust-mode
+    :hook (emacs-lisp-mode racket-mode)))
 ;; conda
 (defun personal-config/init-conda ()
   (use-package conda))

@@ -12,6 +12,7 @@
    markdown
    org
    latex
+   yaml
  ;;Languages
    lsp
    emacs-lisp
