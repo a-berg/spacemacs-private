@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: date_ES
+# key: ddsp
+# mode: command
+# --
+`(format-time-string "%d de %B de %Y")`

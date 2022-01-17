@@ -18,7 +18,7 @@
    racket
    (python :variables
            python-backend 'lsp
-           python-lsp-server 'pyls
+           python-lsp-server 'pylsp
            python-shell-interpreter "python3"
            python-test-runner 'pytest
            python-formatter 'black

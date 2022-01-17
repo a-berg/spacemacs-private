@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: kedro-node
+# key: kn
+# --
+node(
+  func=$1,
+  inputs=dict($2),
+  outputs=dict($3),
+  name=\"$4\",
+)$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: logentry
+# key: log
+# --
+\logentry{`(format-time-string "%-d de %B de %Y")`}{entries/`(format-time-string "%Y_%m_%d")`}`(write-region "" nil (concat "./entries/" (format-time-string "%Y_%m_%d") ".tex"))`
